@@ -34,7 +34,7 @@ export default function Navbar({ theme, setTheme }) {
       <div className="navbar-inner">
         <a href="/" className="navbar-logo">
           <div className="logo-icon">
-            <img src="src\assets\hirpus.jpeg" alt="logo "></img>
+            <img src="/hirpus.jpeg" alt="logo "></img>
           </div>
           <span className="logo-text">HirpusLab</span>
         </a>
