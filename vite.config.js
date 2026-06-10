@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        format: "commonjs",
+        format: "iife",
         entryFileNames: "assets/[name]-[hash].js",
         chunkFileNames: "assets/[name]-[hash].js",
       },
