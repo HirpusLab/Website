@@ -1,0 +1,53 @@
+# Workflow for building static content and publishing to main branch
+name: Build and publish static content
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: debian-unprivileged-runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish dist to main branch
+        run: |
+          git config user.name "forgejo-actions"
+          git config user.email "actions@noreply.local"
+
+          # Copy dist contents to a temp dir
+          cp -r dist /tmp/dist-output
+
+          # Checkout the root, remove everything, replace with dist
+          git checkout main
+          git rm -rf .
+          cp -r /tmp/dist-output/. .
+
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+
+          git commit -m "ci: publish build output [skip ci]"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
