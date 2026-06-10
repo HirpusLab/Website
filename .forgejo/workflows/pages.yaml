@@ -39,15 +39,17 @@ jobs:
           # Copy dist contents to a temp dir
           cp -r dist /tmp/dist-output
 
-          # Checkout the root, remove everything, replace with dist
-          git checkout main
-          git rm -rf .
+          git fetch origin main
+          git worktree add /tmp/deploy-branch origin/main
+
+          cd /tmp/deploy-branch
+          rm -rf *
           cp -r /tmp/dist-output/. .
 
           git add -A
           git diff --cached --quiet && echo "No changes to commit" && exit 0
 
-          git commit -m "ci: publish build output [skip ci]"
+          git commit -m "ci: publish build output"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
