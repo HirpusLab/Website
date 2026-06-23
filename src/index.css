@@ -67,15 +67,3 @@ input {
   background: var(--border);
   border-radius: 3px;
 }
-
-[data-theme="light"] {
-  --bg-primary: #f4f6fb;
-  --bg-secondary: #ffffff;
-  --bg-card: #f0f2f8;
-  --bg-card-hover: #e8ebf4;
-  --border: #d0d4e0;
-  --border-subtle: #e2e5ef;
-  --text-primary: #0d0f14;
-  --text-secondary: #4a5068;
-  --text-muted: #8b90a0;
-}

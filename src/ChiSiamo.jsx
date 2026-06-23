@@ -1,17 +1,16 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import "./index.css";
 import "./App.css";
 
-function App() {
+function ChiSiamo() {
   return (
     <div className="app">
       <Navbar />
       <main>
-        <Hero />
+        <h1>Ciao</h1>
       </main>
     </div>
   );
 }
 
-export default App;
+export default ChiSiamo;

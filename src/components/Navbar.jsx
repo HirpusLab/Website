@@ -1,69 +1,41 @@
-import { useState, useRef, useEffect } from "react";
+import { NavLink } from "react-router";
 import "./Navbar.css";
 
-const ThemeIcon = () => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <circle cx="12" cy="12" r="4" />
-    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-  </svg>
-);
+function UserIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      crxemulator=""
+    >
+      <title>user avatar</title>
+      <path
+        fill="#FFF"
+        d="M10 8c1.7 0 3.06-1.35 3.06-3S11.7 2 10 2 6.94 3.35 6.94 5 8.3 8 10 8zm0 2c-2.8 0-5.06-2.24-5.06-5S7.2 0 10 0s5.06 2.24 5.06 5-2.26 5-5.06 5zm-7 8h14v-1.33c0-1.75-2.31-3.56-7-3.56s-7 1.81-7 3.56V18zm7-6.89c6.66 0 9 3.33 9 5.56V20H1v-3.33c0-2.23 2.34-5.56 9-5.56z"
+      />
+    </svg>
+  );
+}
 
-export default function Navbar({ theme, setTheme }) {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
+export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
         <a href="/" className="navbar-logo">
           <div className="logo-icon">
-            <img src="/hirpus.jpeg" alt="logo "></img>
+            <img src="/hirpus.jpeg" alt="logo"></img>
           </div>
-          <span className="logo-text">HirpusLab</span>
         </a>
 
         <div className="navbar-actions">
-          <div className="theme-wrapper" ref={dropdownRef}>
-            <button
-              className="theme-btn"
-              onClick={() => setDropdownOpen((o) => !o)}
-              aria-label="Toggle theme"
-            >
-              <ThemeIcon />
+          <div className="theme-wrapper">
+            <button className="theme-btn">
+              <NavLink to="/chisiamo">
+                <UserIcon />
+              </NavLink>
             </button>
-            {dropdownOpen && (
-              <div className="theme-dropdown">
-                {["System", "Light", "Dark"].map((t) => (
-                  <button
-                    key={t}
-                    className={`theme-option ${theme === t.toLowerCase() ? "active" : ""}`}
-                    onClick={() => {
-                      setTheme(t.toLowerCase());
-                      setDropdownOpen(false);
-                    }}
-                  >
-                    {t}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>
