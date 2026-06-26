@@ -121,3 +121,21 @@
 .link-btn:active {
   transform: scale(0.97);
 }
+
+.hero ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hero ul li::before {
+  content: "• ";
+  color: var(--text-muted);
+}
+
+.link-container a svg {
+  width: 32px;
+  height: 32px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
