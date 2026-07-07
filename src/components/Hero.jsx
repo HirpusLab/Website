@@ -4,18 +4,17 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-inner">
-        <h1 className="hero-title">
-          Hirpus Lab
-        </h1>
-        <p className="hero-subtitle">Hirpus è un collettivo informatico nato ad Avellino.</p>
-        <p className="hero-subtitle">Ci occupiamo di:
-          <ul>
-            <li>Privacy, security e anonimity;</li>
-            <li>Educazione al software libero;</li>
-            <li>Legacy computing/Permacomputing;</li>
-            <li>Software alternativo e consapevole</li>
-          </ul>
+        <h1 className="hero-title">Hirpus Lab</h1>
+        <p className="hero-subtitle">
+          Hirpus è un collettivo informatico nato ad Avellino.
         </p>
+        <p className="hero-subtitle">Ci occupiamo di:</p>
+        <ul>
+          <li>Privacy, security e anonimity;</li>
+          <li>Educazione al software libero;</li>
+          <li>Legacy computing/Permacomputing;</li>
+          <li>Software alternativo e consapevole</li>
+        </ul>
         <div className="link-container">
           <Button link="https://git.gay/Hirpus">
             <svg
