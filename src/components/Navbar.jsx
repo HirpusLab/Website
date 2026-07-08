@@ -6,7 +6,7 @@ export default function Navbar({ btn }) {
       <div className="navbar-inner">
         <a href="/" className="navbar-logo">
           <div className="logo-icon">
-            <img src="/hirpus.jpeg" alt="logo"></img>
+            <img src="/favicon/favicon.svg" alt="logo"></img>
           </div>
         </a>
 
