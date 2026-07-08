@@ -42,56 +42,17 @@
   border-radius: 4px;
 }
 
-.logo-text {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: -0.2px;
-}
-
 .navbar-actions {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.btn-ghost {
-  padding: 6px 14px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  border-radius: var(--radius-sm);
-  transition:
-    color 0.15s,
-    background 0.15s;
-}
-.btn-ghost:hover {
-  color: var(--text-primary);
-  background: var(--bg-card);
-}
-
-.btn-primary {
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-primary);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  transition:
-    background 0.15s,
-    border-color 0.15s;
-}
-.btn-primary:hover {
-  background: var(--bg-card-hover);
-  border-color: #3a3e50;
-}
-
-.theme-wrapper {
+.btn-wrapper {
   position: relative;
 }
 
-.theme-btn {
+.navbar-btn {
   width: 32px;
   height: 32px;
   display: flex;
@@ -105,54 +66,7 @@
     color 0.15s,
     background 0.15s;
 }
-.theme-btn:hover {
+.navbar-btn:hover {
   color: var(--text-primary);
   background: var(--bg-card-hover);
-}
-
-.theme-dropdown {
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 4px;
-  min-width: 110px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.12s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.theme-option {
-  display: block;
-  width: 100%;
-  padding: 7px 12px;
-  font-size: 13px;
-  font-weight: 500;
-  text-align: left;
-  color: var(--text-secondary);
-  background: transparent;
-  border-radius: var(--radius-sm);
-  transition:
-    background 0.12s,
-    color 0.12s;
-}
-.theme-option:hover {
-  background: var(--bg-card-hover);
-  color: var(--text-primary);
-}
-.theme-option.active {
-  background: rgba(59, 158, 255, 0.12);
-  color: var(--accent-blue);
 }

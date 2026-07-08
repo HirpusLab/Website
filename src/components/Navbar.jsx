@@ -11,8 +11,8 @@ export default function Navbar({ btn }) {
         </a>
 
         <div className="navbar-actions">
-          <div className="theme-wrapper">
-            <button className="theme-btn">{btn}</button>
+          <div className="btn-wrapper">
+            <button className="navbar-btn">{btn}</button>
           </div>
         </div>
       </div>
