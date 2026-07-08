@@ -1,10 +1,62 @@
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Italic.otf") format("opentype");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   background-color: #fff6e9;
 }
-.navbar {
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+.navbar {
+  border-bottom: 1px solid black;
 }
 
 .navbar * {
@@ -14,11 +66,17 @@
   border-radius: 4px;
 }
 
+footer {
+  margin-top: auto;
+  border-top: 1px solid;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3em 1em 1em;
 }
 
 .links {
@@ -51,6 +109,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.adapt-width {
+  max-width: fit-content;
+  width: fit-content;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
 }
 
 .clickable:active {
@@ -178,11 +243,11 @@
 .card-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 30px;
+  gap: 2em;
+  padding: 2em;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .card-box {
     grid-template-columns: 1fr;
     display: flex;
@@ -190,4 +255,23 @@
     justify-items: center;
     align-items: center;
   }
+}
+
+#font-toggle {
+  display: none;
+}
+
+#font-toggle:checked ~ .navbar,
+#font-toggle:checked ~ .card-box,
+#font-toggle:checked ~ .hero,
+#font-toggle:checked ~ footer {
+  font-family: opendyslexic, sans-serif;
+}
+
+#font-toggle:checked ~ footer .font-text::before {
+  content: "Usa font normale";
+}
+
+#font-toggle:not(:checked) ~ footer .font-text::before {
+  content: "Usa font openDyslexic";
 }

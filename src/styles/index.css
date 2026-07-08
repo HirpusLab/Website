@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Italic.otf") format("opentype");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "opendyslexic";
+  src: url("/fonts/OpenDyslexic-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -40,6 +72,10 @@ body {
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+.dyslexic {
+  font-family: opendyslexic, system-ui, sans-serif !important;
 }
 
 a {
