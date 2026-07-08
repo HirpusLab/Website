@@ -1,7 +1,4 @@
 import "./Hero.css";
-import gitGayIcon from "../assets/gay.svg";
-import discourseIcon from "../assets/discourse.svg";
-import gravatarIcon from "../assets/gravatar.svg";
 
 export default function Hero() {
   return (
@@ -20,21 +17,26 @@ export default function Hero() {
         </ul>
         <div className="link-container">
           <Button link="https://git.gay/Hirpus" label="git.gay">
-            <img src={gitGayIcon} alt="git.gay" width="32" height="32" />
+            <img src="/icons/gay.svg" alt="git.gay" width="32" height="32" />
           </Button>
           <Button
             link="https://hirpusl.discourse.group/"
             label="Discourse forum"
           >
             <img
-              src={discourseIcon}
+              src="/icons/discourse.svg"
               alt="Discourse forum"
               width="32"
               height="32"
             />
           </Button>
           <Button link="https://gravatar.com/hirpuslab" label="Gravatar">
-            <img src={gravatarIcon} alt="Gravatar" width="32" height="32" />
+            <img
+              src="/icons/gravatar.svg"
+              alt="Gravatar"
+              width="32"
+              height="32"
+            />
           </Button>
         </div>
       </div>
