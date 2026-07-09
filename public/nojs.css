@@ -45,6 +45,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
 .bar {
@@ -57,6 +58,9 @@ body {
 
 .navbar {
   border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar * {
@@ -69,6 +73,9 @@ body {
 footer {
   margin-top: auto;
   border-top: 1px solid;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
 }
 
 .hero {
@@ -77,6 +84,20 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 3em 1em 1em;
+  gap: 0.6em;
+}
+
+.hero > * {
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero p {
+  font-size: 1.75em;
+  text-align: center;
 }
 
 .links {
@@ -114,6 +135,8 @@ footer {
 .adapt-width {
   max-width: fit-content;
   width: fit-content;
+  max-height: fit-content;
+  height: fit-content;
   padding-right: 0.75em;
   padding-left: 0.75em;
 }
