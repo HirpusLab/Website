@@ -15,7 +15,7 @@ function ChiSiamo() {
       <Navbar
         btn={
           <NavLink to="/">
-            <img src={homeIcon} alt="" width="20" height="20" />
+            <img src={homeIcon} alt="" width="32" height="32" />
           </NavLink>
         }
       />
