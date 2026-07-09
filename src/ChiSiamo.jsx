@@ -1,17 +1,21 @@
 import Navbar from "./components/Navbar";
-import "./index.css";
-import "./App.css";
+import Footer from "./components/Footer";
+import "./styles/index.css";
+import "./styles/App.css";
 import { NavLink } from "react-router";
+import useDyslexicFont from "./hooks/useDyslexicFont";
 import persone from "./assets/persone.json";
 import homeIcon from "./assets/home.svg";
 
 function ChiSiamo() {
+  const [isDyslexic, toggleDyslexic] = useDyslexicFont();
+
   return (
-    <div className="app">
+    <div className={`app ${isDyslexic ? "dyslexic" : ""}`}>
       <Navbar
         btn={
           <NavLink to="/">
-            <img src={homeIcon} alt="" width="20" height="20" />
+            <img src={homeIcon} alt="" width="32" height="32" />
           </NavLink>
         }
       />
@@ -24,6 +28,11 @@ function ChiSiamo() {
           ))}
         </ul>
       </main>
+      <Footer
+        onToggleIsDyslexic={toggleDyslexic}
+        onDyslexic={isDyslexic}
+        toPage="/chisiamonojs.html"
+      />
     </div>
   );
 }

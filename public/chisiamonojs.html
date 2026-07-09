@@ -2,6 +2,31 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="hirpus.vercel.app" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:url" content="hirpus.vercel.app/chisiamonojs.html" />
+    <meta property="og:title" content="Hirpus Lab" />
+    <meta
+      property="og:description"
+      content="Hirpus è un collettivo informatico nato ad Avellino."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hirpus Lab" />
+    <meta
+      name="twitter:description"
+      content="Hirpus è un collettivo informatico nato ad Avellino."
+    />
+    <meta
+      property="og:image"
+      content="https://hirpus.vercel.app/og-image-nojs.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      name="twitter:image"
+      content="https://hirpus.vercel.app/og-image-nojs.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
@@ -26,9 +51,12 @@
     <title>Hirpus Lab</title>
   </head>
   <body>
-    <div class="navbar">
-      <img src="/favicon/favicon.svg" class="retro-btn" />
-      <a href="/nojs.html" class="retro-btn clickable"
+    <input type="checkbox" name="font-toggle" id="font-toggle" />
+    <div class="navbar bar">
+      <a class="retro-btn" href="/nojs.html"
+        ><img src="/favicon/favicon.svg" alt="logo"
+      /></a>
+      <a href="/nojs.html" class="retro-btn clickable toggle-page"
         ><img src="/icons/home.svg" alt="back to home"
       /></a>
     </div>
@@ -48,5 +76,14 @@
         </div>
       </div>
     </div>
+    <footer class="bar">
+      <label for="font-toggle" class="retro-btn adapt-width clickable">
+        <span class="font-text"></span>
+      </label>
+
+      <a class="retro-btn adapt-width clickable" href="/chisiamo"
+        >Torna alla pagina JS</a
+      >
+    </footer>
   </body>
 </html>

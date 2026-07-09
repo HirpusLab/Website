@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/chisiamo", "destination": "/index.html" }
+  ]
+}
