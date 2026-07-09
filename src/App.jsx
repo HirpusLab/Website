@@ -15,7 +15,7 @@ function App() {
       <Navbar
         btn={
           <NavLink to="/chisiamo">
-            <img src={personIcon} alt="" width="32" height="32" />
+            <img src={personIcon} alt="chi siamo" width="32" height="32" />
           </NavLink>
         }
       />
