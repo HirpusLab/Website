@@ -8,7 +8,7 @@ on:
       - master
 jobs:
   Deploy-Preview:
-    runs-on: docker
+    runs-on: hirpus-runner
     steps:
       - uses: actions/checkout@v3
       - name: Install Vercel CLI
