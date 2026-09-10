@@ -19,13 +19,10 @@ export default function Hero() {
           <Button link="https://git.gay/Hirpus" label="git.gay">
             <img src="/icons/gay.svg" alt="git.gay" width="32" height="32" />
           </Button>
-          <Button
-            link="https://hirpusl.discourse.group/"
-            label="Discourse forum"
-          >
+          <Button link="https://hirpuslab.flarum.cloud" label="Flarum forum">
             <img
-              src="/icons/discourse.svg"
-              alt="Discourse forum"
+              src="/icons/flarum.svg"
+              alt="Flarum forum"
               width="32"
               height="32"
             />
