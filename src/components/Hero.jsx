@@ -36,6 +36,12 @@ export default function Hero() {
             />
           </Button>
         </div>
+        <br />
+        <div className="link-container">
+          <a href={"/lettera.htm"} className="lettera-btn">
+            <h2>La nostra lettera aperta sulla situazione A/I</h2>
+          </a>
+        </div>
       </div>
     </section>
   );

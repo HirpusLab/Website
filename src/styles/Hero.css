@@ -6,6 +6,7 @@
 .hero-inner {
   max-width: 640px;
   margin: 0 auto;
+  
 }
 
 .hero-title {
@@ -69,4 +70,27 @@
 .hero ul li::before {
   content: "• ";
   color: var(--text-muted);
+}
+
+
+.lettera-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  transition:
+    color 0.15s,
+    background 0.15s;
+  padding: 20px;
+}
+
+.lettera-btn:hover {
+  transform: scale(1.03);
+}
+
+.lettera-btn:active {
+  transform: scale(0.97);
 }
